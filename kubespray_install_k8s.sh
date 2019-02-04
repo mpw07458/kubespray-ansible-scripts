@@ -1,3 +1,4 @@
+#!/bin/bash
 git clone https://github.com/kubernetes-incubator/kubespray.git
 cd kubespray
 sudo python3 -m pip install -r requirements.txt
