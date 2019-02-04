@@ -18,3 +18,7 @@ pip install --upgrade boto3
 # kube_read_only_port: 10255
 export VPC_VISIBILITY="public"
 export REGION="us-east-1"
+declare -a VPC_VISIBILITY="public"
+# CONFIG_FILE=inventory/mycluster/hosts.ini python36 contrib/inventory_builder/inventory.py ${IPS[@]}
+python3.6 inventory/mycluster/kubespray-aws-inventory.py --list
+ansible-playbook -i inventory/mycluster/kubespray-aws-inventory.py cluster.yml
