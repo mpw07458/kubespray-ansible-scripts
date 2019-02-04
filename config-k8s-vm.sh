@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get update
 sudo sysctl net.ipv4.ip_forward
 sudo sysctl -w net.ipv4.ip_forward=1
