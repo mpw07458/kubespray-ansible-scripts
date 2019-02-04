@@ -21,4 +21,4 @@ export REGION="us-east-1"
 declare -a VPC_VISIBILITY="public"
 # CONFIG_FILE=inventory/mycluster/hosts.ini python36 contrib/inventory_builder/inventory.py ${IPS[@]}
 python3.6 inventory/mycluster/kubespray-aws-inventory.py --list
-ansible-playbook -i inventory/mycluster/kubespray-aws-inventory.py cluster.yml
+ansible-playbook -b -i inventory/mycluster/kubespray-aws-inventory.py cluster.yml
