@@ -1,5 +1,5 @@
 #Global Vars
-aws_cluster_name = "devtest"
+aws_cluster_name = "test"
 
 #VPC Vars
 aws_vpc_cidr_block = "10.250.192.0/18"
@@ -18,7 +18,7 @@ aws_kube_master_size = "t2.medium"
 aws_etcd_num = 3
 aws_etcd_size = "t2.medium"
 
-aws_kube_worker_num = 4
+aws_kube_worker_num = 3
 aws_kube_worker_size = "t2.medium"
 
 #Settings AWS ELB
