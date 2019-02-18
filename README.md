@@ -24,7 +24,7 @@ $ cd contrib/terraform
 $ cd aws-cn
 
 ```
-> Ensure environment file "cn.env" is correct
+> Make sure environment file "cn.env" is correct
 
 ```
 $ cat cn.env
@@ -49,7 +49,7 @@ $ cd contrib/terraform
 $ cd aws-us
 
 ```
-> Ensure environment file "us.env" is correct
+> Make sure environment file "us.env" is correct
 
 ```
 $ cat us.env
