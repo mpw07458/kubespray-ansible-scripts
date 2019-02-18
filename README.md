@@ -132,3 +132,20 @@ kube-master
 [k8s-cluster:vars]
 apiserver_loadbalancer_domain_name="kubernetes-elb-test-53736937.us-west-1.elb.amazonaws.com"
 ```
+
+> Review ssh-bastion.conf file
+
+```
+cat ssh-bastion.conf
+
+
+Host 52.82.41.177
+  Hostname 52.82.41.177
+  StrictHostKeyChecking no
+  ControlMaster auto
+  ControlPath ~/.ssh/ansible-%r@%h:%p
+  ControlPersist 5m
+
+Host  10.250.194.108 10.250.212.221 10.250.202.128 10.250.193.66 10.250.218.69 10.250.198.25 10.250.203.30 10.250.209.219 10.250.204.154
+  ProxyCommand ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -W %h:%p ubuntu@52.82.41.177
+  ```
