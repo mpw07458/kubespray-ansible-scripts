@@ -1,7 +1,7 @@
-# kubespray-ansible-scripts
+## kubespray-ansible-scripts
 Ansible scripts to deploy multi-master HA kubernetes cluster with kubespray kubeadm
 
- Quickstart documentation
+# Quickstart documentation
 
 > Download kubernetes installer from code repository
 first, change directory to working dir for example (~/working) and clone the github repository:
@@ -36,7 +36,7 @@ AWS_DEFAULT_REGION = "cn-northwest-1"
 
 make AWS environment var are correct
 
-> run ansible playbook
+> Run ansible playbook
 
 ```
 $ chmod +x create_cn_infra.sh
@@ -73,3 +73,9 @@ AWS_DEFAULT_REGION = "eu-central-1"
 $ chmod +x create-us-infra.sh
 
 $ ./create-us-infra.sh
+
+> Save state object for infrastructure
+
+```
+$ mkdir ${Date}-state
+$ cp terraform.state  ${Date}-state/.
