@@ -37,6 +37,7 @@ AWS_DEFAULT_REGION = "cn-northwest-1"
 make AWS environment var are correct
 
 > run ansible playbook
+
 ```
 $ chmod +x create_cn_infra.sh
 
@@ -56,7 +57,7 @@ $ cd aws-us
 > Make sure environment file "us-west-1.env" is correct
 
 ```
-$ cat credentials.tfvars.us
+$ cat us-west-1.env
 #AWS Access Key
 AWS_ACCESS_KEY_ID = ""
 #AWS Secret Key
