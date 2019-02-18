@@ -27,7 +27,7 @@ $ cd aws-cn
 > Make sure environment file "credentials.tfvars.cn" is correct
 
 ```
-$ cat credentials.tfvars.cn
+$ cat cn-northwest-1.env
 #AWS Access Key
 AWS_ACCESS_KEY_ID = ""
 #AWS Secret Key
@@ -35,7 +35,7 @@ AWS_SECRET_ACCESS_KEY = ""
 #EC2 SSH Key Name
 AWS_SSH_KEY_NAME = ""
 #AWS Region
-AWS_DEFAULT_REGION = "eu-central-1"
+AWS_DEFAULT_REGION = "cn-northwest-1"
 ```
 
 make AWS environment var are correct
