@@ -24,17 +24,13 @@ $ cd contrib/terraform
 $ cd aws-cn
 
 ```
-> Make sure environment file "credentials.tfvars.cn" is correct
+> Make sure environment file "cn-northwest-1.env" is correct
 
 ```
 $ cat cn-northwest-1.env
-#AWS Access Key
 AWS_ACCESS_KEY_ID = ""
-#AWS Secret Key
 AWS_SECRET_ACCESS_KEY = ""
-#EC2 SSH Key Name
 AWS_SSH_KEY_NAME = ""
-#AWS Region
 AWS_DEFAULT_REGION = "cn-northwest-1"
 ```
 
@@ -57,11 +53,7 @@ $ cd contrib/terraform
 $ cd aws-us
 
 ```
-> Make sure environment file "us.env" is correct
-
-```
-``
-> Make sure environment file "credentials.tfvars.us" is correct
+> Make sure environment file "us-west-1.env" is correct
 
 ```
 $ cat credentials.tfvars.us
@@ -77,6 +69,6 @@ AWS_DEFAULT_REGION = "eu-central-1"
 
 > run ansible playbook
 ```
-$ chmod +x create_us_infra.sh
+$ chmod +x create-us-infra.sh
 
-$ ./create_us_infra.sh
+$ ./create-us-infra.sh
