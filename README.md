@@ -5,21 +5,20 @@ Ansible scripts to deploy multi-master HA kubernetes cluster with kubespray kube
 
 > Download kubernetes installer from code repository
 
-change directory to working dir for example:
+change directory to working dir for example (~/working) and glone the github repository:
 
 ```
 cd ~/working
 
 git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
 
+cd kubespray-ansible-scripts
+
 ```
 
 > Creating infrastructure for China AWS
---------------------------------------
 
 ```
-
-cd kubespray-ansible-scripts
 
 cd contrib/terraform
 
@@ -30,7 +29,7 @@ cd aws
 ```
 ensure environemnt file "cn.env" is correct
 
-cat us.env
+cat cn.env
 ...
 
 make AWS environment var are correct
