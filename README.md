@@ -187,5 +187,5 @@ Host  10.250.194.108 10.250.212.221 10.250.202.128 10.250.193.66 10.250.218.69 1
 repeat at each node
 
 ```
-
+ssh -F ssh-bastion.conf ubuntu@<<machine1>>
 ```
