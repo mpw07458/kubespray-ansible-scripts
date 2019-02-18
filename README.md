@@ -132,6 +132,39 @@ kube-master
 [k8s-cluster:vars]
 apiserver_loadbalancer_domain_name="kubernetes-elb-test-53736937.us-west-1.elb.amazonaws.com"
 ```
+copy inventory/hosts and ssh-bastion.conf to bastion machine
+```
+$ scp -i ~/.ssh/kubespray-us.pem inventory/hosts ubuntu@<<ip or dns bastion>>:~/.
+ 
+$ scp -i ~/.ssh/kubespray-us.pem ssh-bastion.conf ubuntu@<<ip or dns bastion>>:~/.
+
+$ ssh -i ~/.ssh/kubespray-us.pem ubuntu@<<ip or dns bastion>>
+```
+
+> Verify you are logged into bastion
+
+> Create working directory
+
+```
+$ mkdir ~/working
+```
+>  Clone github repo
+```
+$ cd ~/working
+
+$ git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
+```
+
+> copy hosts file and ssh-bastion.conf file from local machine
+
+```
+$ mv ../hosts kubespray-ansible-scripts/inventory/.
+
+$ mv ../ssh-bastion.conf  kubespray-ansible-scripts/.
+
+$ cd kubespray-ansible-scripts
+
+```
 
 > Review ssh-bastion.conf file
 
@@ -149,3 +182,10 @@ Host 52.82.41.177
 Host  10.250.194.108 10.250.212.221 10.250.202.128 10.250.193.66 10.250.218.69 10.250.198.25 10.250.203.30 10.250.209.219 10.250.204.154
   ProxyCommand ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -W %h:%p ubuntu@52.82.41.177
   ```
+> login to each node and master and pass keys
+
+repeat at each node
+
+```
+
+```
