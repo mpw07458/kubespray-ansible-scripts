@@ -38,7 +38,7 @@ AWS_SSH_KEY_NAME = ""
 AWS_DEFAULT_REGION = "cn-northwest-1"
 ```
 
-make AWS environment var are correct
+make sure AWS environment var are correct
 
 > Run ansible playbook
 
@@ -77,6 +77,7 @@ AWS_DEFAULT_REGION = "us-west-1"
 $ chmod +x create-us-infra.sh
 
 $ ./create-us-infra.sh
+```
 
 > Save state object for infrastructure
 
@@ -84,3 +85,4 @@ $ ./create-us-infra.sh
 $ mkdir {$Date}-state
 
 $ cp terraform.state  {$Date}-state/.
+```
