@@ -7,11 +7,11 @@ Ansible scripts to deploy multi-master HA kubernetes cluster with kubespray kube
 first, change directory to working dir for example (~/working) and clone the github repository:
 
 ```
-cd ~/working
+$ cd ~/working
 
-git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
+$ git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
 
-cd kubespray-ansible-scripts
+$ cd kubespray-ansible-scripts
 
 ```
 
@@ -19,41 +19,48 @@ cd kubespray-ansible-scripts
 
 ```
 
-cd contrib/terraform
+$ cd contrib/terraform
 
-cd aws-cn
+$ cd aws-cn
 
 ```
-ensure environemnt file "cn.env" is correct
+> Ensure environment file "cn.env" is correct
 
-cat cn.env
-...
+```
+$ cat cn.env
+```
 
 make AWS environment var are correct
 
-run ansible playbook
-...
+> run ansible playbook
+```
+$ chmod +x create_cn_infra.sh
+
+$ ./create_cn_infra.sh
 
 ```
 
-creating Infrastructure for US AWS
-----------------------------------
+> Creating infrastructure for US AWS
 
 ```
 
-cd <repo name>
+$ cd contrib/terraform
 
-cp -pR us ../.
+$ cd aws-us
 
-ensure environemnt file "us.env" is correct
+```
+> Ensure environment file "us.env" is correct
 
-cat us.env
-...
+```
+$ cat us.env
+```
 
 make AWS environment var are correct
 
-run ansible playbook
-
-...
-
+> run ansible playbook
 ```
+$ chmod +x create_us_infra.sh
+
+$ ./create_us_infra.sh
+
+
