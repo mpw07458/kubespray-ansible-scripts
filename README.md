@@ -28,9 +28,13 @@ $ cd aws-cn
 
 ```
 $ cat cn-northwest-1.env
+#AWS Access Key
 AWS_ACCESS_KEY_ID = ""
+#AWS Secret Key
 AWS_SECRET_ACCESS_KEY = ""
+#EC2 SSH Key Name
 AWS_SSH_KEY_NAME = ""
+#AWS Region
 AWS_DEFAULT_REGION = "cn-northwest-1"
 ```
 
@@ -65,7 +69,7 @@ AWS_SECRET_ACCESS_KEY = ""
 #EC2 SSH Key Name
 AWS_SSH_KEY_NAME = ""
 #AWS Region
-AWS_DEFAULT_REGION = "eu-central-1"
+AWS_DEFAULT_REGION = "us-west-1"
 ```
 
 > run ansible playbook
@@ -77,5 +81,6 @@ $ ./create-us-infra.sh
 > Save state object for infrastructure
 
 ```
-$ mkdir ${Date}-state
-$ cp terraform.state  ${Date}-state/.
+$ mkdir {$Date}-state
+
+$ cp terraform.state  {$Date}-state/.
