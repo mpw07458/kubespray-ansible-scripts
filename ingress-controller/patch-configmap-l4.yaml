@@ -1,0 +1,41 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: internal-nginx-ingress-controller
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: internal-nginx-ingress-controller
+    app.kubernetes.io/part-of: internal-nginx-ingress-controller
+data:
+  use-proxy-protocol: "true"
+  client-body-buffer-size: 32m
+  hsts: "true"
+  proxy-body-size: 8m
+  proxy-buffering: "off"
+  proxy-read-timeout: "600"
+  proxy-send-timeout: "600"
+  server-tokens: "false"
+  ssl-passthrough: "true"
+  upstream-keepalive-connections: "50"
+  real-ip-header: "proxy_protocol"
+  set-real-ip-from: "192.168.192.168"
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: tcp-services
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: internal-nginx-ingress-controller
+    app.kubernetes.io/part-of: internal-nginx-ingress-controller
+
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: udp-services
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: internal-nginx-ingress-controller
+    app.kubernetes.io/part-of: internal-nginx-ingress-controller
+
