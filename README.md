@@ -196,5 +196,5 @@ ssh -F ssh-bastion.conf ubuntu@<<machine1>>
 run ansible playbook for kubernetes cluster
 
 ```
-$ ansible-playbook -i inventory/hosts cluster.yml -b -e ansible_user=ubuntu
+$ ansible-playbook -i ./inventory/hosts ./cluster.yml -e ansible_user=ubuntu -b --flush-cache -vvvv
 ```
