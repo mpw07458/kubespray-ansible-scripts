@@ -7,7 +7,7 @@ Ansible scripts to deploy multi-master HA kubernetes cluster with kubespray kube
 first, change directory to working dir for example (~/working) and clone the github repository:
 
 ```
-$ cd ~/working
+$ cd ~/<<working dir>>
 
 $ git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
 
@@ -42,9 +42,9 @@ AWS_DEFAULT_REGION = "cn-northwest-1"
 > Run ansible playbook
 
 ```
-$ chmod +x create_cn_infra.sh
+$ chmod +x create-cn-infra.sh
 
-$ ./create_cn_infra.sh
+$ ./create-cn-infra.sh
 
 ```
 
@@ -88,6 +88,8 @@ $ cp terraform.state  {$Date}-state/.
 > Make sure the inventory/hosts file is correct for the infrastructure
 
 ```
+$ cd ~/<<working dir>>/kubespray-ansible-scripts
+
 $ cat inventory/hosts
 [all]
 kubernetes-test-master0 ansible_host=10.250.207.40
@@ -146,11 +148,11 @@ $ ssh -i ~/.ssh/kubespray-us.pem ubuntu@<<ip or dns bastion>>
 > Create working directory
 
 ```
-$ mkdir ~/working
+$ mkdir ~/<<working dir>>
 ```
 >  Clone github repo
 ```
-$ cd ~/working
+$ cd ~/<<working dir>>
 
 $ git clone https://github.com/mpw07458/kubespray-ansible-scripts.git
 ```
@@ -189,3 +191,5 @@ repeat at each node
 ```
 ssh -F ssh-bastion.conf ubuntu@<<machine1>>
 ```
+> Install kubernetes from the bastion machine
+
