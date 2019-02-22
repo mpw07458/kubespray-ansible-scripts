@@ -23,5 +23,4 @@ sudo sysctl net.ipv4.ip_forward
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo ufw status
 sudo ufw disable
-git clone https://github.com/kubernetes-incubator/kubespray.git
-chmod +x kubespray/kubespray-install-k8s.sh
+chmod +x kubespray-ansible-scripts/kubespray-install-k8s.sh
