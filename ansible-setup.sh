@@ -24,6 +24,4 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo ufw status
 sudo ufw disable
 git clone https://github.com/kubernetes-incubator/kubespray.git
-cp kube.env kubespray/.
-cp kubespray-install-k8s.sh kubespray/.
 chmod +x kubespray/kubespray-install-k8s.sh
